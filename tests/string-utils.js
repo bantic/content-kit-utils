@@ -1,6 +1,6 @@
 QUnit.module('string-utils');
 
-var StringUtils = require('content-kit-utils/string-utils');
+var StringUtils = require('string-utils');
 
 test('trim', function() {
   ok (1);

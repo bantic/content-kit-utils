@@ -1,6 +1,6 @@
 QUnit.module('array-utils');
 
-var ArrayUtils = require('content-kit-utils/array-utils');
+var ArrayUtils = require('array-utils');
 
 test('toArray: NodeList', function() {
   var fixtureEl = document.createElement('div');

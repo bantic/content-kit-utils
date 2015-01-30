@@ -1,6 +1,6 @@
 QUnit.module('node-utils');
 
-var NodeUtils = require('content-kit-utils/node-utils');
+var NodeUtils = require('node-utils');
 
 function getObjectSize(obj) {
   var size = 0, key;

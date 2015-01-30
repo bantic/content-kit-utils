@@ -1,6 +1,6 @@
 QUnit.module('object-utils');
 
-var ObjectUtils = require('content-kit-utils/object-utils');
+var ObjectUtils = require('object-utils');
 
 test('mergeWithOptions', function() {
   ok (1);
