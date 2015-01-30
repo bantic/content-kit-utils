@@ -1,7 +1,8 @@
 {
   "name": "content-kit-utils",
   "version": "0.0.1",
-  "description": "\"Utility functionality for ContentKit suite\"",
+  "description": "Utility functionality for content-kit suite",
+  "repository": "https://github.com/bustlelabs/content-kit-utils",
   "scripts": {
     "test": "gulp test"
   },
