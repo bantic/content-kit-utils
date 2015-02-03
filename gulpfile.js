@@ -2,7 +2,6 @@ var gulp   = require('gulp');
 var jshint = require('gulp-jshint');
 var qunit  = require('gulp-qunit');
 var concat = require('gulp-concat');
-var gulpOpen   = require('gulp-open');
 var es6ModuleTranspiler = require('gulp-es6-module-transpiler');
 
 var jsSrc = './src/**/*.js';
@@ -32,10 +31,6 @@ gulp.task('build', ['lint'], function() {
 
 gulp.task('test', ['build'], function() {
   return gulp.src(testRunner).pipe(qunit());
-});
-
-gulp.task('test-browser', ['build'], function(){
-  return gulp.src(testRunner).pipe(gulpOpen('<% file.path %>')); 
 });
 
 gulp.task('watch', function() {
