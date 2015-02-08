@@ -1,6 +1,6 @@
 var RegExpTrim        = /^\s+|\s+$/g;
 var RegExpTrimLeft    = /^\s+/;
-var RegExpWSChars     = /(\r\n|\n|\r|\t|\u00A0)/gm;
+var RegExpWSChars     = /(\r\n|\n|\r|\t)/gm;
 var RegExpMultiWS     = /\s+/g;
 var RegExpNonAlphaNum = /[^a-zA-Z\d]/g;
 
@@ -28,7 +28,7 @@ function underscore(string) {
 }
 
 /**
- * Cleans line breaks, tabs, non-breaking spaces, then multiple occuring whitespaces.
+ * Cleans line breaks, tabs, then multiple occuring whitespaces.
  */
 function sanitizeWhitespace(string) {
   return string ? (string + '').replace(RegExpWSChars, '').replace(RegExpMultiWS, ' ') : '';
