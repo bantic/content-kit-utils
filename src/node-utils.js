@@ -2,32 +2,6 @@ import { sanitizeWhitespace } from './string-utils';
 import { toArray } from './array-utils';
 
 /**
- * A document instance separate from the page's document. (if browser supports it)
- * Prevents images, scripts, and styles from executing while parsing nodes.
- */
-var standaloneDocument = (function() {
-  var implementation = document.implementation;
-  var createHTMLDocument = implementation.createHTMLDocument;
-
-  if (createHTMLDocument) {
-    return createHTMLDocument.call(implementation, '');
-  }
-  return document;
-})();
-
-/**
- * document.createElement with our lean, standalone document
- */
-function createElement(type) {
-  return standaloneDocument.createElement(type);
-}
-
-/**
- * A reusable DOM Node for parsing html content.
- */
-var DOMParsingNode = createElement('div');
-
-/**
  * Returns plain-text of a `Node`
  */
 function textOfNode(node) {
@@ -69,4 +43,4 @@ function attributesForNode(node, blacklist) {
   return hash;
 }
 
-export { createElement, DOMParsingNode, textOfNode, unwrapNode, attributesForNode };
+export { textOfNode, unwrapNode, attributesForNode };
