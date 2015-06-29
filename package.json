@@ -4,11 +4,16 @@
   "description": "Utility functionality for content-kit suite",
   "repository": "https://github.com/bustlelabs/content-kit-utils",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "build": "rm -rf dist && broccoli build dist"
   },
   "author": "Garth Poitras <garth22@gmail.com> (http://garthpoitras.com/)",
   "license": "MIT",
+  "main": "dist/content-kit-utils/index.js",
   "devDependencies": {
+    "broccoli": "^0.16.3",
+    "broccoli-merge-trees": "^0.2.1",
+    "broccoli-multi-builder": "",
     "gulp": "^3.8.10",
     "gulp-concat": "^2.4.3",
     "gulp-es6-module-transpiler": "^0.1.3",
