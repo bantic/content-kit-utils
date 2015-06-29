@@ -5,7 +5,8 @@
   "repository": "https://github.com/bustlelabs/content-kit-utils",
   "scripts": {
     "test": "gulp test",
-    "build": "rm -rf dist && broccoli build dist"
+    "build": "rm -rf dist && broccoli build dist",
+    "prepublish": "npm run build"
   },
   "author": "Garth Poitras <garth22@gmail.com> (http://garthpoitras.com/)",
   "license": "MIT",
@@ -13,7 +14,7 @@
   "devDependencies": {
     "broccoli": "^0.16.3",
     "broccoli-merge-trees": "^0.2.1",
-    "broccoli-multi-builder": "",
+    "broccoli-multi-builder": "^0.1.0",
     "gulp": "^3.8.10",
     "gulp-concat": "^2.4.3",
     "gulp-es6-module-transpiler": "^0.1.3",
